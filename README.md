@@ -29,6 +29,14 @@ Add the entry, *openssh-lpk-6.6p1-0.3.14.patch* in the last line of *series* fil
 
 ~~~ bash
 quilt push
+vi debian/rules
+~~~
+The following lines should be added where confflags is set, for example, just before the comment line, **# Linker flags.**
+
+># LPK flags
+confflags += --with-libs=-lldap --with-cppflags=-DWITH_LDAP_PUBKEY
+
+~~~ bash
 sudo dpkg-buildpackage -us -uc
 ~~~
 
