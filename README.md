@@ -33,8 +33,10 @@ vi debian/rules
 ~~~
 The following lines should be added where confflags is set, for example, just before the comment line, **# Linker flags.**
 
-># LPK flags
+~~~ bash
+# LPK flags
 confflags += --with-libs=-lldap --with-cppflags=-DWITH_LDAP_PUBKEY
+~~~
 
 ~~~ bash
 sudo dpkg-buildpackage -us -uc
