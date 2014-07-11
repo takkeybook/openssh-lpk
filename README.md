@@ -38,6 +38,8 @@ The following lines should be added where confflags is set, for example, just be
 confflags += --with-libs=-lldap --with-cppflags=-DWITH_LDAP_PUBKEY
 ~~~
 
+Now you can build a package!
+
 ~~~ bash
 sudo dpkg-buildpackage -us -uc
 ~~~
